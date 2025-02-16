@@ -1,4 +1,5 @@
 <template>
+  <MyContent :students="students" />
   <div class="HomePage">
     <h3>Home Page</h3>
     <h5>
@@ -9,6 +10,19 @@
     </h5>
   </div>
 </template>
+<script>
+import MyContent from "@/components/MyContent.vue";
+export default {
+  components: {
+    MyContent,
+  },
+  data() {
+    return {
+      students: ["hahah"],
+    };
+  },
+};
+</script>
 <style scoped lang="scss">
 .HomePage {
   h5 {

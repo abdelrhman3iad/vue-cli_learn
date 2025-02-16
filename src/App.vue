@@ -1,12 +1,20 @@
 <template>
   <NavBar />
+  <!-- <MyContent :students="students" /> -->
   <router-view />
 </template>
 <script>
 import NavBar from "@/components/NavBar.vue";
+// import MyContent from "@/components/MyContent.vue";
 export default {
   components: {
     NavBar,
+    // MyContent,
+  },
+  data() {
+    return {
+      // students: ["ahmed", "mostafa", "sayed"],
+    };
   },
 };
 </script>
