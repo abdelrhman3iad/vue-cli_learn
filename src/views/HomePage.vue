@@ -1,5 +1,17 @@
 <template>
-  <MyContent :students="students" />
+  <MyContent
+    :students="students"
+    :IsActive="IsActive"
+    @changeActive="reverseActive"
+  />
+  <hr />
+  <!-- @changeActive="reverseActive" -->
+
+  <MyContent
+    :students="students"
+    :IsActive="IsActive"
+    @changeActive="reverseActive"
+  />
   <div class="HomePage">
     <h3>Home Page</h3>
     <h5>
@@ -18,8 +30,14 @@ export default {
   },
   data() {
     return {
-      students: ["hahah"],
+      students: ["hahah", "ahmed", "mohamed"],
+      IsActive: true,
     };
+  },
+  methods: {
+    reverseActive() {
+      this.IsActive = !this.IsActive;
+    },
   },
 };
 </script>
